@@ -1,6 +1,6 @@
 #!/bin/sh -xe
 
-PKG_CONFIG_LIBS="libffi libxml2 glib"
+PKG_CONFIG_LIBS="libffi libxml2 glib gettext"
 
 CFLAGS="-Wno-deprecated"
 LDFLAGS=
@@ -15,7 +15,7 @@ done
 
 export PKG_CONFIG_PATH
 
-for lib in glib intl ; do
+for lib in glib gettext ; do
 	CFLAGS="$CFLAGS -I/usr/local/opt/${lib}/include"
 	LDFLAGS="$LDFLAGS -L/usr/local/opt/${lib}/lib"
 done
