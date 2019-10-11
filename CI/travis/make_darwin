@@ -1,6 +1,6 @@
 #!/bin/sh -xe
 
-PKG_CONFIG_LIBS="libffi libxml2 glib gettext"
+PKG_CONFIG_LIBS="libffi libxml2 glib gettext gtkdatabox"
 
 CFLAGS="-Wno-deprecated"
 LDFLAGS=
