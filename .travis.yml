@@ -11,28 +11,6 @@ services:
 
 matrix:
   include:
-    - compiler: clang
-      os: linux
-      env:
-        - TEST_NON_GIT_REPO=1
-        - LDIST=DO_NOT_DEPLOY
-    - compiler: gcc
-      os: linux
-      env:
-        - EXTRA_SSH=-oHostKeyAlgorithms=+ssh-dss
-    - os: linux
-      env:
-        - OS_TYPE=centos_docker
-        - OS_VERSION=7
-    - os: linux
-      env:
-        - OS_TYPE=ubuntu_docker
-        - OS_VERSION=bionic
-    - compiler: "gcc"
-      os: osx
-      osx_image: xcode10.1
-      env:
-        - EXTRA_SSH=-oHostKeyAlgorithms=+ssh-dss
     - compiler: "gcc"
       os: osx
       osx_image: xcode11
